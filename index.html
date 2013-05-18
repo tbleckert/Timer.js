@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		
+		<title>Timer.js</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:100&text=0123456789:.' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="assets/css/timer.css">
+	</head>
+	<body>
+		<p class="how-to no-touch">Press <b class="key">enter</b> to start/stop and <b class="key">r</b> to reset. Press <b class="key">down</b> or <b class="key">up</b> to change mode (countdown or up, default is up). If you want to set the time, press <b class="key">s</b> and start typing, press <b class="key">esc</b> when you're done editing.</p>
+		<p class="how-to touch"><b class="key">tap</b> to start/stop. <b class="key">swipe</b> to change mode (countdown or up, default is up) and <b class="key">double tap</b> to set the time.</p>
+		
+		<article id="timer" class="timer">
+			<time data-timer-bind="time">00:00</time>
+			<input class="edit" id="edit" type="time" step="1" value="00:00">
+		</article>
+	
+		<script src="assets/js/lib/mootools-core-1.4.5.js"></script>
+		<script src="assets/js/lib/fittext.js"></script>
+		<script src="assets/js/lib/jester.js"></script>
+		<script src="assets/js/timer.js"></script>
+		<script src="assets/js/kickit.js"></script>
+	</body>
+</html>
