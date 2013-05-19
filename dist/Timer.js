@@ -1183,7 +1183,7 @@ return true;}catch(m){}return false;};if(d.doScroll&&!h()){e.push(h);c=true;}if(
   	setup: function () {
   		// Create the hidden edit element for touch devices
   		this.editElement = new Element('input', {
-  			type:    'timer',
+  			type:    'time',
   			id:      'edit',
   			'class': 'edit',
   			value:   '00:00',
@@ -1315,13 +1315,13 @@ return true;}catch(m){}return false;};if(d.doScroll&&!h()){e.push(h);c=true;}if(
   	
   	// Enter edit mode (key)
   	startEdit: function () {
-  		this.edit = true;
+  		this.editMode = true;
   		this.timer.stopTime();
   	},
   	
   	// Exit edit mode
   	stopEdit: function () {
-  		this.edit = false;
+  		this.editMode = false;
   		this.currentNumber = 0;
   	},
   	
@@ -1344,20 +1344,28 @@ return true;}catch(m){}return false;};if(d.doScroll&&!h()){e.push(h);c=true;}if(
   	
   	// Edit mode (touch)
   	edit: function () {
-  		if (this.edit) {
+  		if (this.editMode) {
   			this.stopEdit();
   		} else {
-  			this.edit = true;
+  			this.editMode = true;
   			this.currentTime = this.timer.get('time');
   			
   			this.editElement.set('value', this.currentTime).setFocus();
   		}
   	},
   	
-  	// Toggle count mode (touch and click)
+  	// Toggle count mode (touch)
   	toggleMode: function () {
   		if (this.editMode) {
   			return false;
+  		}
+  		
+  		if (this.currentDirection === 'down') {
+  			this.timer.set('timeDirection', 'up');
+  			this.currentDirection = 'up';
+  		} else {
+  			this.timer.set('timeDirection', 'down');
+  			this.currentDirection = 'down';
   		}
   	},
   	
