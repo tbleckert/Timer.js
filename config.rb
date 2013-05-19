@@ -2,10 +2,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "assets/css/"
-sass_dir = "assets/sass/"
-images_dir = "assets/sass/gfx/"
-javascripts_dir = "assets/js/"
+css_dir = "source/css/"
+sass_dir = "source/sass/"
+images_dir = "source/sass/gfx/"
+javascripts_dir = "source/js/"
 
 # Remove this if you want to use SCSS
 preferred_syntax = :sass

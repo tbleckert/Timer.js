@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+		<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		
 		<title>Timer.js</title>
 		
 		<link href='http://fonts.googleapis.com/css?family=Lato:100&text=0123456789:.' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="assets/css/timer.css">
+		<link rel="stylesheet" href="source/css/timer.css">
 	</head>
 	<body>
 		<p class="how-to no-touch">Press <b class="key">enter</b> to start/stop and <b class="key">r</b> to reset. Press <b class="key">down</b> or <b class="key">up</b> to change mode (countdown or up, default is up). If you want to set the time, press <b class="key">s</b> and start typing, press <b class="key">esc</b> when you're done editing.</p>
@@ -19,11 +19,8 @@
 			<time data-timer-bind="time">00:00</time>
 			<input class="edit" id="edit" type="time" step="1" value="00:00">
 		</article>
-	
-		<script src="assets/js/lib/mootools-core-1.4.5.js"></script>
-		<script src="assets/js/lib/fittext.js"></script>
-		<script src="assets/js/lib/jester.js"></script>
-		<script src="assets/js/timer.js"></script>
-		<script src="assets/js/kickit.js"></script>
+		
+		<!-- Hey! If you're looking for the source files, check out https://github.com/tbleckert/Timer.js --> 
+		<script src="dist/Timer.min.js"></script>
 	</body>
 </html>

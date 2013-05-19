@@ -1,0 +1,31 @@
+{
+  "name": "Timer.js",
+  "sourceName": "Timer",
+  "version": "0.0.1",
+  "description": "A simple responsive and fullscreen timer",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbleckert/Timer.js.git"
+  },
+  "keywords": [
+    "js",
+    "mootools",
+    "app",
+    "touch",
+    "timer"
+  ],
+  "author": "Tobias Bleckert",
+  "license": "WTFPL",
+  "gitHead": "7c996c74f3ceed0c4729801b5497d212f5ba4a3b",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.5.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.3"
+  }
+}
