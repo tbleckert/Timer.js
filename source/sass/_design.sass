@@ -1,12 +1,18 @@
 @import "compass/css3/transition"
 
-$darkBackground: #412b4e
-$lightText:      #f5f3e9
+$dark:  #412b4e
+$light: #f5f3e9
 
 html
-	background: $darkBackground
+	background: $dark
 	height: 100%
 	overflow: hidden
+	
+	&.light
+		background: $light
+		
+		.timer
+			color: $dark
 	
 body
 	height: 100%
@@ -14,7 +20,7 @@ body
 	
 .timer
 	font: 100 200px Lato, sans-serif
-	color: $lightText
+	color: $light
 	max-width: 90%
 	height: 90%
 	margin: 0 auto
@@ -48,7 +54,7 @@ body
 .how-to
 	padding: 20px
 	font: 10px/25px Helvetica, sans-serif
-	color: #f5f3e9
+	color: $light
 	margin: 0
 	letter-spacing: 1px
 	text-align: center
@@ -75,8 +81,16 @@ body
 	padding: 0 4px
 	font-size: 11px
 	line-height: 18px
-	color: #555
+	color: $dark
 	text-align: center
-	background-color: #f5f3e9
+	background-color: $light
 	border-radius: 3px
 	margin: 0 5px
+	
+.light
+	.key
+		background-color: $dark
+		color: $light
+		
+	.how-to
+		color: $dark

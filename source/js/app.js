@@ -63,9 +63,9 @@
   		
   		// Set touch class on html
   		if (window.hasOwnProperty('ontouchstart') || navigator.msMaxTouchPoints) {
-  			$$('html').set('class', 'touch');
+  			$$('html').addClass('touch');
   		} else {
-  			$$('html').set('class', 'no-touch');
+  			$$('html').addClass('no-touch');
   		}
   		
   		// Set some useful variables
@@ -125,7 +125,7 @@
   			this.timer.set('timeDirection', 'up');
   		} else if (e.key === this.options.keys.modeDown) {
   			this.timer.set('timeDirection', 'down');
-  		} else if (e.key === this.options.keys.theme) {
+  		} else if (e.key === this.options.keys.toggleTheme) {
   			this.toggleTheme();
   		} else if (this.edit) {
   			this.editTime(e.key);
@@ -227,6 +227,14 @@
   	toggleTheme: function () {
   		if (this.editMode) {
   			return false;
+  		}
+  		
+  		var htmlEl = $$('html');
+  		
+  		if (!htmlEl.hasClass('light')[0]) {
+  			htmlEl.addClass('light');
+  		} else {
+  			htmlEl.removeClass('light');
   		}
   	}
   

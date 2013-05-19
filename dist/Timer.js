@@ -1,4 +1,4 @@
-/*! Timer.js - v0.0.1 - 2013-05-18
+/*! Timer.js - v0.0.1 - 2013-05-19
 * Copyright (c) 2013 ; Licensed  */
 (function(){this.MooTools={version:"1.4.5",build:"ab8ea8824dc3b24b6666867a2c4ed58ebb762cf0"};var o=this.typeOf=function(i){if(i==null){return"null";}if(i.$family!=null){return i.$family();
 }if(i.nodeName){if(i.nodeType==1){return"element";}if(i.nodeType==3){return(/\S/).test(i.nodeValue)?"textnode":"whitespace";}}else{if(typeof i.length=="number"){if(i.callee){return"arguments";
@@ -1201,9 +1201,9 @@ return true;}catch(m){}return false;};if(d.doScroll&&!h()){e.push(h);c=true;}if(
   		
   		// Set touch class on html
   		if (window.hasOwnProperty('ontouchstart') || navigator.msMaxTouchPoints) {
-  			$$('html').set('class', 'touch');
+  			$$('html').addClass('touch');
   		} else {
-  			$$('html').set('class', 'no-touch');
+  			$$('html').addClass('no-touch');
   		}
   		
   		// Set some useful variables
@@ -1263,7 +1263,7 @@ return true;}catch(m){}return false;};if(d.doScroll&&!h()){e.push(h);c=true;}if(
   			this.timer.set('timeDirection', 'up');
   		} else if (e.key === this.options.keys.modeDown) {
   			this.timer.set('timeDirection', 'down');
-  		} else if (e.key === this.options.keys.theme) {
+  		} else if (e.key === this.options.keys.toggleTheme) {
   			this.toggleTheme();
   		} else if (this.edit) {
   			this.editTime(e.key);
@@ -1365,6 +1365,14 @@ return true;}catch(m){}return false;};if(d.doScroll&&!h()){e.push(h);c=true;}if(
   	toggleTheme: function () {
   		if (this.editMode) {
   			return false;
+  		}
+  		
+  		var htmlEl = $$('html');
+  		
+  		if (!htmlEl.hasClass('light')[0]) {
+  			htmlEl.addClass('light');
+  		} else {
+  			htmlEl.removeClass('light');
   		}
   	}
   
