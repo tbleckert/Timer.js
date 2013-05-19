@@ -16,4 +16,3 @@ Besides changing the css you can change the behavior by passing options in to th
 ## Todo
 * Add support for sounds.
 * Add shake support for mobile devices
-* Make a light theme
