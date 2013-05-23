@@ -1,4 +1,4 @@
-/*! Timer.js - v0.0.1 - 2013-05-19
+/*! Timer.js - v0.0.1 - 2013-05-23
 * Copyright (c) 2013 ; Licensed  */
 (function(){this.MooTools={version:"1.4.5",build:"ab8ea8824dc3b24b6666867a2c4ed58ebb762cf0"};var o=this.typeOf=function(i){if(i==null){return"null";}if(i.$family!=null){return i.$family();
 }if(i.nodeName){if(i.nodeType==1){return"element";}if(i.nodeType==3){return(/\S/).test(i.nodeValue)?"textnode":"whitespace";}}else{if(typeof i.length=="number"){if(i.callee){return"arguments";
@@ -1237,14 +1237,14 @@ return true;}catch(m){}return false;};if(d.doScroll&&!h()){e.push(h);c=true;}if(
   			
   		this.timer.addEvent('change', function (what, value) {
   			if (what === 'timeDirection') {
-  				this.element.set('class', 'timer ' + value);
+  				self.element.set('class', 'timer ' + value);
   			}
   		}).addEvent('onTimeDecreased', function (time) {
   			var seconds = Number.from(time.seconds),
   					minutes = Number.from(time.minutes);
   			
   			if (seconds < 1 && minutes < 1) {
-  				this.timer.stopTime();
+  				self.timer.stopTime();
   			}
   		});
   	},

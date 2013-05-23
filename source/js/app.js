@@ -99,14 +99,14 @@
   			
   		this.timer.addEvent('change', function (what, value) {
   			if (what === 'timeDirection') {
-  				this.element.set('class', 'timer ' + value);
+  				self.element.set('class', 'timer ' + value);
   			}
   		}).addEvent('onTimeDecreased', function (time) {
   			var seconds = Number.from(time.seconds),
   					minutes = Number.from(time.minutes);
   			
   			if (seconds < 1 && minutes < 1) {
-  				this.timer.stopTime();
+  				self.timer.stopTime();
   			}
   		});
   	},
